@@ -1,0 +1,14 @@
+<h5>Lista de departamentos</h5>
+<ul>
+    @for ( d of dpts; track $index ) {
+        <li>{{d.NombreDepartamento}} ({{d.Descripcion}})</li>
+    }
+</ul>
+
+@if (showToast) {
+    <div class="d-flex align-items-end justify-content-end">
+    <ngb-toast header="Datos recibidos">
+        Listado de departamentos cargado correctamente
+    </ngb-toast>
+    </div>
+}
