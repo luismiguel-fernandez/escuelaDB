@@ -1,1 +1,33 @@
-<p>list-members works!</p>
+<h5>Elige el departamento del que quieres ver los miembros</h5>
+<select #dpt (change)="getDptMembers(dpt.value)">
+    <option value="0">Seleccione un departamento</option>
+    @for ( d of dpts; track $index ) {
+        <option value="{{d.DepartamentoID}}">{{d.NombreDepartamento}}</option>
+    }
+</select>
+
+<h5>Lista de miembros</h5>
+<ul>
+    @for ( m of members; track $index ) {
+        <li>{{ m.Nombre + " " + m.Apellido }}</li>
+    }
+</ul>
+<table>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <!--
+     @for () {
+     <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+     </tr>
+     } -->
+</table>

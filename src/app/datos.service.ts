@@ -12,5 +12,9 @@ export class DatosService {
     return this.http.get('http://localhost/escuelaDB/getDpts.php')
   }
 
+  getDptMembers(dptName:string) {
+    return this.http.get('http://localhost/escuelaDB/getMembers.php?departamento='+dptName)
+  }
+
   
 }
