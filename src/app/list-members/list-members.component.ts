@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { DatosService } from '../datos.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-list-members',
-  imports: [],
+  imports: [ FormsModule ],
   templateUrl: './list-members.component.html',
   styles: ``
 })
@@ -38,5 +39,9 @@ export class ListMembersComponent {
     } else {
       return ""
     }
+  }
+
+  updateName(newName:string) {
+    //this.datos.updateName(newName)
   }
 }

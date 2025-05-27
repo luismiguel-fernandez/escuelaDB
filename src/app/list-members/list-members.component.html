@@ -7,27 +7,22 @@
 </select>
 
 <h5>Lista de miembros</h5>
-<ul>
-    @for ( m of members; track $index ) {
-        <li>{{ m.Nombre + " " + m.Apellido }}</li>
-    }
-</ul>
-<table>
+<table class="table">
     <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Tlfn</th>
+        <th>Correo</th>
+        <th>Fecha incorporación</th>
     </tr>
-    <!--
-     @for () {
-     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-     </tr>
-     } -->
+    @for ( m of members; track $index ) {
+    <tr>
+        <td>{{ m.Nombre }}</td>
+        <td>{{ m.Apellido }}</td>
+        <td>{{ m.Telefono }}</td>
+        <td>{{ m.Email }}</td>
+        <td>{{ m.FechaIngreso }}</td>
+    </tr>
+    }
+     
 </table>

@@ -1,1 +1,13 @@
-<p>add-dpt works!</p>
+<h2>INSERCIONES</h2>
+<input #nombre type="text" placeholder="Nombre del nuevo departamento"><br>
+<textarea #descr placeholder="Descripción del nuevo departamento"></textarea><br>
+<button (click)="addDpt(nombre.value,descr.value)">Crear</button>
+
+
+@if (showToast) {
+    <div class="d-flex align-items-end justify-content-end">
+    <ngb-toast header="Datos recibidos">
+        Listado de departamentos cargado correctamente
+    </ngb-toast>
+    </div>
+}

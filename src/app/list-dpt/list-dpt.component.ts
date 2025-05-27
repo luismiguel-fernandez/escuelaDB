@@ -19,6 +19,7 @@ export class ListDptComponent {
 
   getDpts() {
     this.datos.getDpts().subscribe( (res:any) => {
+      //fetch .then
       this.dpts = res;
       this.showToast = true;
     })
