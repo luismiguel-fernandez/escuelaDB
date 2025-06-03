@@ -9,6 +9,17 @@ export class DatosService {
   constructor(private http:HttpClient) { }
   private urlMembers = 'http://localhost/escuelaDB/getMembers.php?departamento='
 
+  addMember(n:string,a:string,e:string,t:string,d:string) {
+    let params = {
+      nombre: n,
+      apellido: a,
+      email: e,
+      telefono: t,
+      departamento_id: d
+    }
+    return this.http.post('http://localhost/escuelaDB/insertMember.php',params)
+  }
+
   getDpts() {
     return this.http.get('http://localhost/escuelaDB/getDpts.php')
   }

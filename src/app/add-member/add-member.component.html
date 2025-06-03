@@ -1,1 +1,21 @@
-<p>add-member works!</p>
+<label for="nombre_miembro">Nombre: </label>
+<input #c1 type="text" placeholder="Nombre"><br>
+
+<label for="apellido_miembro">Apellido: </label>
+<input #c2 type="text" placeholder="Apellido"><br>
+
+<label for="email_miembro">Email: </label>
+<input #c3 type="email" placeholder="Email"><br>
+
+<label for="telefono_miembro">Teléfono: </label>
+<input #c4 type="tel" placeholder="Teléfono"><br>
+
+<label for="departamentoID_miembro">Departamento: </label>
+<select #c5>
+    <option value="0">Selecciona un departamento</option>
+    @for ( d of dpts; track $index ) {
+        <option value="{{d.DepartamentoID}}">{{d.NombreDepartamento}}</option>
+    }
+</select> <br>
+
+<button (click)="addMember(c1.value,c2.value,c3.value,c4.value,c5.value)" class="btn btn-primary">Añadir</button>
